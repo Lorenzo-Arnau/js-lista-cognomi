@@ -11,7 +11,7 @@ var indiceOutput = document.getElementsByTagName('div')[0];
 // chiedo il fatidico prompt per il cognome
 var cognomeUtente = prompt('Ciao tu! come ti chiami di cognome?');
 // chiedo il fatidico prompt per il cognome
-
+cognomeUtente = cognomeUtente.toUpperCase();
 // aggiungo il cognome dell'utente e ordino la lista alfabeticamente
 listaCognomi.push(cognomeUtente);
 listaCognomi.sort();
@@ -25,7 +25,7 @@ var where = listaCognomi.indexOf(cognomeUtente) + 1;
 // creo un ciclo for,che mi stampi in li gli elementi dell'array
 for (var i = 0; i < listaCognomi.length; i++) {
   var elementoPrecedente = listOutput.innerHTML;
-  listOutput.innerHTML = elementoPrecedente + '<li>' + listaCognomi[i] + '</li>';
+  listOutput.innerHTML = elementoPrecedente + '<li class="capitalize">' + listaCognomi[i] + '</li>';
 }
 // creo un ciclo for,che mi stampi in li gli elementi dell'array
 
